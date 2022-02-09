@@ -1,0 +1,41 @@
+<!-- {{title}} 
+    {{line_ChartView}}  -->
+    <!-- <app-linechart></app-linechart>
+
+
+     <div class="tab">
+      <button class="tablinks" >Tab</button>
+      
+<button class="tablinks">Tab</button>
+      <button class="tablinks">Tab</button> -->
+      <!-- <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    </div> -->
+    <div class="toolbar" role="banner">
+      <div id="header-text">Dashboard 
+</div>
+      <!-- <button type="button" 
+      (click)="boarnNewDashboard()">
+             Generate Component+   
+    </button>  -->
+<ng-multiselect-dropdown id="pollution_Items"
+  [placeholder]="'Select Item'"
+  [settings]="dropdownSettings"
+  [data]="dropdownList"
+  (ngModel)="selectedItems"
+  (onSelect)="onItemSelect($event)"
+  (onSelectAll)="onSelectAll($event)"
+  (onDeSelect)="onItemDeSelect($event)" 
+  (onDeSelectAll)="onDropDownClose($event)"
+  (onDeSelect)="onItemDeSelect($event)">
+  [disabled]="disabled" 
+>
+</ng-multiselect-dropdown>
+</div>{{this.disabled}}
+    <div class="Container">
+        <div class="box_Size"><app-linechart [line_ChartView]="this.line_ChartView"></app-linechart></div>
+        <div class="box_Size"><app-barchart [bar_ChartView]="this.bar_ChartView" ></app-barchart></div>
+        <div class="box_Size"><app-piechart [pie_ChartView]="this.pie_ChartView"></app-piechart></div>
+        <div class="box_Size"><app-polarchart [polar_ChartView]="this.polar_ChartView"></app-polarchart></div>
+    </div>
